@@ -16,7 +16,7 @@ public class Calculations {
 		System.out.println(xls.getRowCount("Tables"));
 		
 		
-			for (int i = 2; i < xls.getRowCount("Tables"); i++) {
+			for (int i = 2; i <=xls.getRowCount("Tables"); i++) {
 				hm = new HashMap<String, Double>();
 				hm.put("Monday", Double.parseDouble(xls.getCellData("Tables", "Monday", i)));
 				hm.put("Tuesday", Double.parseDouble(xls.getCellData("Tables", "Tuesday", i)));

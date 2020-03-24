@@ -5,13 +5,11 @@ import java.util.Scanner;
 
 public class Test {
 
-	static Scanner scn = null;
-	
 	public static void main(String[] args) {
 		
 		//The input to the program should be a comma separated list of papers that the consumer wants to subscribe.
 		
-		scn = new Scanner(System.in);
+		Scanner scn = new Scanner(System.in);
 		
 		System.out.println("Enter Papers whose monthly subscription needs to be calculated. Choices are :: TOI, Hindu, ET, BM and HT");
 		System.out.println("The input to the program should be a comma separated list of papers that the consumer wants to subscribe.");
@@ -31,4 +29,5 @@ public class Test {
 		System.out.println(hs);
 	}
 
+	
 }

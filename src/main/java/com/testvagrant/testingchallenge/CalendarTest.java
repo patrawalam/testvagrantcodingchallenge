@@ -16,7 +16,7 @@ public class CalendarTest {
 		
 		
 		int totalDaysInGivenMonth = cal.getActualMaximum(Calendar.DAY_OF_MONTH);
-		System.out.println(totalDaysInGivenMonth);
+		System.out.println("Total number of days in the Month \'"+month+"\' and Year \'"+year+ "\' is :: " +totalDaysInGivenMonth);
 		
 		hm.put("Sunday", getDay(year, calMonth, 1));
 		hm.put("Monday", getDay(year, calMonth, 2));
@@ -93,11 +93,11 @@ public class CalendarTest {
             return count; 
     } 
 	
+	/*
 	public static void main(String[] args) {
 		
 		//We need to find out number of weekdays/saturday/sunday of any given month in any given year
 		System.out.println(daysInAMonth(2020, "Mar"));
-		
 	}
-
+	*/
 }

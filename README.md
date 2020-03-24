@@ -9,3 +9,5 @@ Created a Class called Calculations where the code to add Day/Value pair for eac
 
 Step 3 - Created a Class for Calendar manipulations. Created a public method which accepts "Year" and "Month" (first 3 letters) and it returns a HashMap which contains number of Sundays, Mondays, Tuesday, ..., Saturdays in that month.
 This will be later used in calculation of monthly expense
+
+Step 4 - Integrating the CalendarTest code into Test.java i.e. calling the static method "daysInAMonth" based on the user input

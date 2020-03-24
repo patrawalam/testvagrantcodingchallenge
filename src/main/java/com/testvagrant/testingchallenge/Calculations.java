@@ -30,5 +30,6 @@ public class Calculations {
 			}
 		
 			System.out.println(paper);
+			
 	}
 }

@@ -4,16 +4,16 @@ import java.util.HashMap;
 
 import com.testvagrant.testingchallenge.util.Xls_Reader;
 
-public class Calculations {
+public class ExcelData {
 
-	public static void main(String[] args) {
+	public static HashMap<String, HashMap<String, Double>> returnExcelData() {
 
-		HashMap<String, HashMap<String, Double>> paper = new HashMap<String, HashMap<String, Double>>();
+		HashMap<String, HashMap<String, Double>> excelData = new HashMap<String, HashMap<String, Double>>();
 		HashMap<String, Double> hm = null;
 		Xls_Reader xls = new Xls_Reader(
 				"D:\\SeleniumFiles\\EclipseWorkspaceForPractice\\TestingChallenge\\src\\test\\resources\\CategoryPrices.xlsx");
 
-		System.out.println(xls.getRowCount("Tables"));
+		//System.out.println(xls.getRowCount("Tables"));
 		
 		
 			for (int i = 2; i <=xls.getRowCount("Tables"); i++) {
@@ -26,10 +26,14 @@ public class Calculations {
 				hm.put("Saturday", Double.parseDouble(xls.getCellData("Tables", "Saturday", i)));
 				hm.put("Sunday", Double.parseDouble(xls.getCellData("Tables", "Sunday", i)));
 				
-				paper.put(xls.getCellData("Tables", "Category", i),hm);
+				excelData.put(xls.getCellData("Tables", "Category", i),hm);
 			}
 		
-			System.out.println(paper);
-			
+			//System.out.println(excelData);
+			return excelData;
+	}
+	
+	public static void main(String[] args) {
+		System.out.println(returnExcelData());
 	}
 }

@@ -93,11 +93,11 @@ public class CalendarTest {
             return count; 
     } 
 	
-	/*
+	
 	public static void main(String[] args) {
 		
 		//We need to find out number of weekdays/saturday/sunday of any given month in any given year
-		System.out.println(daysInAMonth(2020, "Mar"));
+		System.out.println(daysInAMonth(2020, "Feb"));
 	}
-	*/
+	
 }

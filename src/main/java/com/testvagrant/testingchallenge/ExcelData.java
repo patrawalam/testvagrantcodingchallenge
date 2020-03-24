@@ -14,8 +14,6 @@ public class ExcelData {
 				"D:\\SeleniumFiles\\EclipseWorkspaceForPractice\\TestingChallenge\\src\\test\\resources\\CategoryPrices.xlsx");
 
 		//System.out.println(xls.getRowCount("Tables"));
-		
-		
 			for (int i = 2; i <=xls.getRowCount("Tables"); i++) {
 				hm = new HashMap<String, Double>();
 				hm.put("Monday", Double.parseDouble(xls.getCellData("Tables", "Monday", i)));

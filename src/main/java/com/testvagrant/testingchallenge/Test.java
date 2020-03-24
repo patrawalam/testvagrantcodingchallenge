@@ -5,19 +5,28 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Scanner;
 
+import com.testvagrant.testingchallenge.util.Xls_Reader;
+
 public class Test {
 	
 	public static Scanner scn;
 
 	public static void main(String[] args) {
 		
+		Xls_Reader xls = new Xls_Reader(
+				"D:\\SeleniumFiles\\EclipseWorkspaceForPractice\\TestingChallenge\\src\\test\\resources\\CategoryPrices.xlsx");
+		HashSet<String> allCategories = new HashSet<String>();
+		for (int i = 2; i <=xls.getRowCount("Tables"); i++) {
+			allCategories.add(xls.getCellData("Tables", "Category", i));
+		}
+		
 		//The input to the program should be a comma separated list of papers that the consumer wants to subscribe.
 		String str;
 		String[] strArr;
 		 scn = new Scanner(System.in);
 		
-		System.out.println("Enter Papers whose monthly subscription needs to be calculated. Choices are :: TOI, Hindu, ET, BM and HT");
-		System.out.println("The input to the program should be a comma separated list of papers that the consumer wants to subscribe.");
+		System.out.println("Enter Papers whose monthly subscription needs to be calculated. Choices are :: "+allCategories);
+		System.out.println("The input to the program should be a comma separated list of papers that the consumer wants to subscribe (eg: TOI,ET)");
 		System.out.print("Enter your string here :: ");
 		str = scn.next();
 		str = str.replaceAll(" ", "");
@@ -26,8 +35,7 @@ public class Test {
 		strArr = str.split(",");
 		
 		for (String s : strArr) {
-			if(s.equalsIgnoreCase("TOI") || s.equalsIgnoreCase("Hindu") || s.equalsIgnoreCase("ET") 
-					|| s.equalsIgnoreCase("BM") || s.equalsIgnoreCase("HT"))
+			if(allCategories.contains(s))
 				hs.add(s);
 		}
 		
@@ -35,7 +43,7 @@ public class Test {
 		System.out.println();
 		System.out.println("*******************************************************************");
 		System.out.println();
-		System.out.print("Enter the Year and Month (using first three letters only) seperated by comma whose budget needs calculated :: ");
+		System.out.print("Enter the Year followed by Month (using first three letters only) seperated by comma whose budget needs calculated (eg: 2020,Mar) :: ");
 		str = scn.next();
 		strArr = str.split(",");
 		int year = Integer.parseInt(strArr[0]);

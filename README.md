@@ -21,3 +21,5 @@ Step 4 - Integrating the CalendarTest code into Test.java i.e. calling the stati
 Step 5 - Integrated the ExcelData code into Test.java ie. calling the static method "returnExcelData"
 
 Step 6 - First working prototype published. 
+
+Step 7 - Added code right at the start to read the Data from the Excel file and compare the user input with the categories mentioned in the Excel file. This makes using if condition easier i.e. using hashset "contains" method

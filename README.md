@@ -1,12 +1,30 @@
-# testvagrantcodingchallenge
-Repository created for Coding Challenge provided by Test Vagrant
+# Test Vagrant Coding Challenge
+Objective: Repository created for Coding Challenge provided by Test Vagrant
+
+******************************************************************************************************************
+The Table for adding categories along with the daily cost for each category is maintained separately in an Excel file named "CategoryPrices.xlsx" (Sheet: Tables) under src/test/resources folder
 
 1) PrototypeOneTest - This program calculates the "monthly" subscription of the papers selected by the user for any given month in any given year.  
 
+Sample Input data: 
+- At first user input --> TOI,BM,HT,Random,TOI,Random,BM,@#@$,BM
+- At second user input --> 2020,Apr
+
+The "CategoryPrices.xlsx" excel file contains a Sheet "ManualCheck" to tally with the results of the program
+
+
+
+2) PrototypeTwoTest - This program calculates the subscription of category based on frequency (Monthly, Weekly, Biweekly) for any given month in any given year.
+
+Sample Input data: 
+- At first user input --> Hindu,Daily,Hindu,Daily,ET,Blah,Blah,Weekly,ET,Weekly,TOI,Biweekly
+- At second user input --> 2020,Mar
 
 
 ******************************************************************************************************************
-History of changes done:
+# History of changes done:
+
+## A) For PrototypeOneTest
 
 Step 1 - Taking the input from the user in the form of comma separated list. Splitting the list to String Array.
 Based on Paper selection, adding them to HashSet to ensure no duplicates are added
@@ -25,4 +43,9 @@ Step 6 - First working prototype published.
 
 Step 7 - Added code right at the start to read the Data from the Excel file and compare the user input with the categories mentioned in the Excel file. This makes using if condition easier i.e. using hashset "contains" method
 
-Step 8 - 
+Step 8 - Added relevant comments for better readability
+
+
+## B) For PrototypeTwoTest
+User now enters Category along with Frequency in a comma separated list and the system calculates the estimated subscription amount.
+ 

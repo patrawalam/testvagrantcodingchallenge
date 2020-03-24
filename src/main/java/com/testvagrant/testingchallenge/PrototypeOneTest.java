@@ -50,12 +50,14 @@ public class PrototypeOneTest {
 		}
 		
 		//If the user entered any other values apart from the given choice, it will terminate the program
-		if(!(hs.size() > 0))
+		if(!(hs.size() > 0)) {
+			System.out.println("No proper newspapers entered by user. Exiting the program. Please run again");
 			System.exit(0);
+		}
+		System.out.println(hs);	//[TOI, ET]
+		System.out.println();	
 		
 		//Takes the input from the user about the Month and Year in which the user wants to calculate subscription for
-		System.out.println(hs);	//[TOI, ET]
-		System.out.println();
 		System.out.println("*******************************************************************");
 		System.out.println();
 		System.out.print("Enter the Year followed by Month (using first three letters only) seperated by comma whose budget needs calculated (eg: 2020,Mar) :: ");
@@ -94,6 +96,7 @@ public class PrototypeOneTest {
 				}
 				
 				System.out.println("Total Monthly subscription for "+s+" is Rs "+multiply);
+				System.out.println();
 				sum = sum + multiply;
 			}
 			

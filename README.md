@@ -1,13 +1,14 @@
 # testvagrantcodingchallenge
 Repository created for Coding Challenge provided by Test Vagrant
 
+1) PrototypeOneTest - This program calculates the "monthly" subscription of the papers selected by the user for any given month in any given year.  
 
 
 
 ******************************************************************************************************************
 History of changes done:
 
-Step 1 - Taking the input from the user in the form of comma seperated list. Splitting the list to String Array.
+Step 1 - Taking the input from the user in the form of comma separated list. Splitting the list to String Array.
 Based on Paper selection, adding them to HashSet to ensure no duplicates are added
 
 Step 2 - Create an Excel called "CategoryPrices" which has a table created for category and prices based on day of the week.
@@ -23,3 +24,5 @@ Step 5 - Integrated the ExcelData code into Test.java ie. calling the static met
 Step 6 - First working prototype published. 
 
 Step 7 - Added code right at the start to read the Data from the Excel file and compare the user input with the categories mentioned in the Excel file. This makes using if condition easier i.e. using hashset "contains" method
+
+Step 8 - 

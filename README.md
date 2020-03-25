@@ -16,13 +16,15 @@ Sample Input data:
 
 The "CategoryPrices.xlsx" excel file contains a Sheet "ManualCheck" to tally with the results of the program
 
-
+<br/><br/>
 
 **2) PrototypeTwoTest** - This program calculates the subscription of **any** category based on frequency (Monthly, Weekly, Biweekly) for any given month in any given year.
 
 Sample Input data: 
-- *At first user input* --> Hindu,Daily,Hindu,Daily,ET,Blah,Blah,Weekly,ET,Weekly,TOI,Biweekly
-- *At second user input* --> 2020,Mar
+- *At first user input* --> BM,Daily,BM,Daily,ET,Blah,Blah,Weekly,HT,Daily,TOI,Daily,Milk,Daily,Magazine,Weekly,Carwash,Biweekly
+- *At second user input* --> 2020,Apr
+
+The "CategoryPrices.xlsx" excel file contains a Sheet "ManualCheck" to tally with the results of the program
 
 <br/><br/>
 

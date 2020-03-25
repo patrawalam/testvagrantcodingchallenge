@@ -88,7 +88,7 @@ public class PrototypeTwoTest {
 				if (excelData.containsKey(e.getKey()))
 				{
 					calcHashMap = excelData.get(e.getKey());
-					System.out.println("Calculation Table for \'"+e.getKey()+"\' is :: "+calcHashMap);  	//Hindu --- {Monday=2.5, Thursday=2.5, Friday=2.5, Sunday=4.0, Wednesday=2.5, Tuesday=2.5, Saturday=4.0}
+					System.out.println("Calculation Table for \'"+e.getKey()+"\' is :: "+calcHashMap);  	//ET={Monday=2.0, Thursday=2.0, Friday=2.0, Sunday=10.0, Wednesday=2.0, Tuesday=2.0, Saturday=2.0}}
 					multiply = 0;
 					for(Map.Entry<String, Integer> es : hm.entrySet()) {
 						multiply = multiply + (es.getValue() * calcHashMap.get(es.getKey()));
@@ -103,33 +103,34 @@ public class PrototypeTwoTest {
 				if (excelData.containsKey(e.getKey()))
 				{
 					calcHashMap = excelData.get(e.getKey());
-					System.out.println("Calculation Table for \'"+e.getKey()+"\' is :: "+calcHashMap);  	//Hindu --- {Monday=2.5, Thursday=2.5, Friday=2.5, Sunday=4.0, Wednesday=2.5, Tuesday=2.5, Saturday=4.0}
+					System.out.println("Calculation Table for \'"+e.getKey()+"\' is :: "+calcHashMap);  	//ET={Monday=2.0, Thursday=2.0, Friday=2.0, Sunday=10.0, Wednesday=2.0, Tuesday=2.0, Saturday=2.0}}
 					multiply = 0;
 					for(Map.Entry<String, Integer> es : hm.entrySet()) {
 						multiply = multiply + (1 * calcHashMap.get(es.getKey()));
 					}
-					
+					multiply = multiply/7;
 					System.out.println("Total Weekly subscription for "+e.getKey()+" is Rs "+multiply);
+					System.out.println("Therefore, total Monthly subscription for "+e.getKey()+" is Rs "+multiply*4);
 					System.out.println();
-					sum = sum + multiply;
+					sum = sum + (multiply*4);
 				}
 				}
 			else if(e.getValue().equalsIgnoreCase("Biweekly")){
 				if (excelData.containsKey(e.getKey()))
 				{
 					calcHashMap = excelData.get(e.getKey());
-					System.out.println("Calculation Table for \'"+e.getKey()+"\' is :: "+calcHashMap);  	//Hindu --- {Monday=2.5, Thursday=2.5, Friday=2.5, Sunday=4.0, Wednesday=2.5, Tuesday=2.5, Saturday=4.0}
+					System.out.println("Calculation Table for \'"+e.getKey()+"\' is :: "+calcHashMap);  	//ET={Monday=2.0, Thursday=2.0, Friday=2.0, Sunday=10.0, Wednesday=2.0, Tuesday=2.0, Saturday=2.0}}
 					multiply = 0;
 					for(Map.Entry<String, Integer> es : hm.entrySet()) {
 						multiply = multiply + (2 * calcHashMap.get(es.getKey()));
 					}
-					
+					multiply = multiply/14;
 					System.out.println("Total Biweekly subscription for "+e.getKey()+" is Rs "+multiply);
+					System.out.println("Therefore, total monthly subscription for "+e.getKey()+" is Rs "+multiply*2);
 					System.out.println();
-					sum = sum + multiply;
+					sum = sum + (multiply*2);
 				}
 				}
-			
 			
 		}
 		System.out.println();

@@ -14,15 +14,14 @@ import java.util.Scanner;
 
 import com.testvagrant.testingchallenge.util.Xls_Reader;
 
-public class PrototypeOneTest {
+public class PrototypeOneTest extends BaseClass{
 	
 	public static Scanner scn;
 
 	public static void main(String[] args) {
 		
 		//Reading the category column data from the Excel file which contains category/day-cost values 
-		Xls_Reader xls = new Xls_Reader(
-				"D:\\SeleniumFiles\\EclipseWorkspaceForPractice\\TestingChallenge\\src\\test\\resources\\CategoryPrices.xlsx");
+		Xls_Reader xls = new Xls_Reader(System.getProperty("user.dir")+"\\src\\test\\resources\\"+BaseClass.setupProperties("PrototypeOneExcel"));
 		HashSet<String> allCategories = new HashSet<String>();
 		for (int i = 2; i <=xls.getRowCount("Tables"); i++) {
 			allCategories.add(xls.getCellData("Tables", "Category", i));
@@ -74,7 +73,7 @@ public class PrototypeOneTest {
 		System.out.println();
 		
 		//Retrieves the excel data by calling static method returnExcelData which defines daily cost on each day for each category. 
-		HashMap<String, HashMap<String, Double>> excelData = ExcelData.returnExcelData();
+		HashMap<String, HashMap<String, Double>> excelData = ExcelData.returnExcelData(BaseClass.setupProperties("PrototypeOneExcel"));
 		//{Hindu={Monday=2.5, Thursday=2.5, Friday=2.5, Sunday=4.0, Wednesday=2.5, Tuesday=2.5, Saturday=4.0},
 		//BM={Monday=1.5, Thursday=1.5, Friday=1.5, Sunday=1.5, Wednesday=1.5, Tuesday=1.5, Saturday=1.5}, 
 		//HT={Monday=2.0, Thursday=2.0, Friday=2.0, Sunday=4.0, Wednesday=2.0, Tuesday=2.0, Saturday=4.0}, 

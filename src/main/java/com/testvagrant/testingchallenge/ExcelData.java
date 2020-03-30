@@ -6,12 +6,12 @@ import com.testvagrant.testingchallenge.util.Xls_Reader;
 
 public class ExcelData {
 
-	public static HashMap<String, HashMap<String, Double>> returnExcelData() {
+	public static HashMap<String, HashMap<String, Double>> returnExcelData(String fileName) {
 
 		HashMap<String, HashMap<String, Double>> excelData = new HashMap<String, HashMap<String, Double>>();
 		HashMap<String, Double> hm = null;
 		Xls_Reader xls = new Xls_Reader(
-				"D:\\SeleniumFiles\\EclipseWorkspaceForPractice\\TestingChallenge\\src\\test\\resources\\CategoryPrices.xlsx");
+				System.getProperty("user.dir")+"\\src\\test\\resources\\"+fileName);
 
 		//System.out.println(xls.getRowCount("Tables"));
 			for (int i = 2; i <=xls.getRowCount("Tables"); i++) {
@@ -32,6 +32,6 @@ public class ExcelData {
 	}
 	
 	public static void main(String[] args) {
-		System.out.println(returnExcelData());
+		System.out.println(returnExcelData("PrototypeTwoExcel.xlsx"));
 	}
 }

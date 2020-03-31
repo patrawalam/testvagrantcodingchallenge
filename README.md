@@ -8,23 +8,31 @@ The Table for adding categories along with the daily cost for each category is m
 
 # How to run:
 
-**1) PrototypeOneTest** - This program calculates the "monthly" subscription of the papers entered by the user in comma seperated list, for any given month in any given year.  
+**1) PrototypeOne** - This program calculates the "monthly" subscription of the newspapers entered by the user in comma separated list, for any given month in any given year.  
 
 Sample Input data: 
 - *At first user input* --> TOI,BM,HT,Random,TOI,Random,BM,@#@$,BM
 - *At second user input* --> 2020,Apr
 
-The "CategoryPrices.xlsx" excel file contains a Sheet "ManualCheck" to tally with the results of the program
+The "PrototypeOneExcel.xlsx" excel file contains a Sheet "ManualCheck" to tally with the results of the program
 
 <br/><br/>
 
-**2) PrototypeTwoTest** - This program calculates the subscription of **any** category based on frequency (Monthly, Weekly, Biweekly) for any given month in any given year.
+**2) PrototypeTwo** - This program calculates the subscription of **any** category based on frequency (Monthly, Weekly, Biweekly) for any given month in any given year.
 
 Sample Input data: 
-- *At first user input* --> BM,Daily,BM,Daily,ET,Blah,Blah,Weekly,HT,Daily,TOI,Daily,Milk,Daily,Magazine,Weekly,Carwash,Biweekly
+- *At first user input* --> BM,Daily,BM,Daily,Blah,Blah,Weekly,HT,Daily,TOI,Daily,Milk,Daily,Magazine,Weekly,Carwash,Biweekly
 - *At second user input* --> 2020,Apr
 
-The "CategoryPrices.xlsx" excel file contains a Sheet "ManualCheck" to tally with the results of the program
+The "PrototypeTwoExcel.xlsx" excel file contains a Sheet "ManualCheck" to tally with the results of the program
+
+<br/><br/>
+
+
+In order to run the code <br/>
+1) Navigate to src/test/java/com/testvagrant/unittest --- File name "UnitTest.java".<br/>
+2) Out of the two Unit Test cases, set "enabled=true" for whichever test you want to run.<br/>
+3) Enter valid inputs to see the calculations. Enter invalid inputs to see appropriate messages.<br/>
 
 <br/><br/>
 
@@ -58,4 +66,13 @@ Step 8 - Added relevant comments for better readability
 
 ## B) For PrototypeTwoTest
 User now enters Category along with Frequency in a comma separated list and the system calculates the estimated subscription amount.
- 
+
+
+## 31st March) Version 2.0
+1) Refactored all the code to add OOD by creating interface, abstract classes and using Reflection to run the appropriate test case at runtime by creating respective Object of Class.<br/>
+2) Segregated code in appropriate packages<br/>
+3) Used concept of Constructor to initialize the XLS_Reader Object<br/>
+4) Removed all static references<br/>
+5) Used enums for one scenario to test if correct month is entered by user<br/>
+6) Used System.exit(0) instead of throwing exceptions for abrupt termination with appropriate messages<br/>
+7) Unit tests added<br/>

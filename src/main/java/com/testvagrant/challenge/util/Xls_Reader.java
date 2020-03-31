@@ -1,4 +1,4 @@
-package com.testvagrant.testingchallenge.util;
+package com.testvagrant.challenge.util;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -20,7 +20,7 @@ import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 public class Xls_Reader {
- //public static String filename = System.getProperty("user.dir")+"\\src\\com\\qtpselenium\\xlsx\\Suite.xlsx";
+ 
  public  String path;
  public  FileInputStream fis = null;
  public  FileOutputStream fileOut =null;
@@ -533,7 +533,7 @@ index,String url,String message){
   }
    
   // to run this on stand alone
-  public static void main(String arg[]) throws IOException{
+  /*public static void main(String arg[]) throws IOException{
    
    //System.out.println(filename);
  
@@ -542,11 +542,12 @@ index,String url,String message){
 
 
    datatable = new 
-Xls_Reader(System.getProperty("user.dir")+"\\src\\com\\qtpselenium\\xls\\Controller.xlsx");
+	Xls_Reader(System.getProperty("user.dir")+"\\src\\com\\xls\\Controller.xlsx");
      for(int col=0 ;col< datatable.getColumnCount("TC5"); col++){
       System.out.println(datatable.getCellData("TC5", col, 1)); 
      } 
-     
+    
   }
+  */ 
 }
  

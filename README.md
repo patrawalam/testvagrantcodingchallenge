@@ -21,8 +21,8 @@ The "PrototypeOneExcel.xlsx" excel file contains a Sheet "ManualCheck" to tally 
 **2) PrototypeTwo** - This program calculates the subscription of **any** category based on frequency (Monthly, Weekly, Biweekly) for any given month in any given year.
 
 Sample Input data: 
-- *At first user input* --> BM,Daily,BM,Daily,Blah,Blah,Weekly,HT,Daily,TOI,Daily,Milk,Daily,Magazine,Weekly,Carwash,Biweekly
-- *At second user input* --> 2020,Apr
+- *At first user input* --> BM,BM,Blah,Blah,HT,TOI,Milk,Magazine,Carwash,Bikewash
+- *At every second user input* --> Daily or Weekly or Biweekly
 
 The "PrototypeTwoExcel.xlsx" excel file contains a Sheet "ManualCheck" to tally with the results of the program
 

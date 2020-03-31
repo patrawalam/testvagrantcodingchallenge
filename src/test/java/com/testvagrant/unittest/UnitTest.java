@@ -17,7 +17,7 @@ import com.testvagrant.challenge.app.ApplicationRunner;
 public class UnitTest {
 
 	@Test(description = "This is the test created for calculating the Monthly Newspaper subscription for any given month"
-			+ "in any given year based on the user input",
+			+ " in any given year based on the user input",
 			enabled=true)
 	public void runPrototypeOne(Method m) {
 		

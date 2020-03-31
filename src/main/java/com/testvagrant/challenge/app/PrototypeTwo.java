@@ -64,6 +64,7 @@ public class PrototypeTwo extends BaseClass{
 		}
 		System.out.println();
 		if(!(hs.size() > 0)) {
+			System.out.println();
 			System.out.println("No proper categories entered by user. Exiting the program. Please run again");
 			System.exit(0);
 		}

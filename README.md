@@ -69,10 +69,10 @@ User now enters Category along with Frequency in a comma separated list and the 
 
 
 ## 31st March) Version 2.0
-1) Refactored all the code to add OOD by creating interface, abstract classes and using Reflection to run the appropriate test case at runtime by creating respective Object of Class.<br/>
+1) Refactored all the code to add OOD by creating interface, abstract class and using Reflection to run the appropriate test case at runtime by creating respective Object of Class.<br/>
 2) Segregated code in appropriate packages<br/>
-3) Used concept of Constructor to initialize the XLS_Reader Object<br/>
+3) Used concept of Constructor to initialize the XLS_Reader Object by reading Excel file name from Properties file<br/>
 4) Removed all static references<br/>
 5) Used enums for one scenario to test if correct month is entered by user<br/>
 6) Used System.exit(0) instead of throwing exceptions for abrupt termination with appropriate messages<br/>
-7) Unit tests added<br/>
+7) Unit tests added. Kindly trigger UnitTest by setting "enabled=true"<br/>
